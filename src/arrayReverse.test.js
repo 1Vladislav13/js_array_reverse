@@ -40,4 +40,8 @@ describe(`Function 'arrayReverse':`, () => {
   it(`should return an array with empty strings if original array consists of empty strings`, () => {
     expect(arrayReverse(['', '', ''])).toEqual(['', '', '']);
   });
+
+  it(`should preserve an empty string between non-empty strings`, () => {
+    expect(arrayReverse(['ab', '', 'c'])).toEqual(['cb', '', 'a']);
+  });
 });
